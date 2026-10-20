@@ -6,6 +6,7 @@ venv/
 *.pgm
 *.png
 !grafik.png
+!grafik-numpy.png
 .ipynb_checkpoints/
 .vscode/
 .idea/

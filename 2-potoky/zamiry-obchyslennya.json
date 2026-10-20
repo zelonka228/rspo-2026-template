@@ -1,0 +1,136 @@
+{
+  "zadacha": "obchyslennya",
+  "posl_min": 11.199,
+  "shyryna": 600,
+  "vysota": 400,
+  "max_iter": 500,
+  "cpu_count": 16,
+  "progoniv": 3,
+  "tochky": [
+    {
+      "potoky": 1,
+      "zamiry": [
+        {
+          "pul": 0.0,
+          "obchyslennya": 11.175,
+          "zapys": 0.0238,
+          "razom": 11.199
+        },
+        {
+          "pul": 0.0,
+          "obchyslennya": 11.891,
+          "zapys": 0.0247,
+          "razom": 11.916
+        },
+        {
+          "pul": 0.0,
+          "obchyslennya": 11.776,
+          "zapys": 0.0249,
+          "razom": 11.8
+        }
+      ],
+      "min": 11.199,
+      "pryskorennya": 1.0
+    },
+    {
+      "potoky": 2,
+      "zamiry": [
+        {
+          "pul": 0.0003,
+          "obchyslennya": 11.372,
+          "zapys": 0.0242,
+          "razom": 11.396
+        },
+        {
+          "pul": 0.0003,
+          "obchyslennya": 10.905,
+          "zapys": 0.0365,
+          "razom": 10.942
+        },
+        {
+          "pul": 0.0002,
+          "obchyslennya": 11.442,
+          "zapys": 0.0228,
+          "razom": 11.465
+        }
+      ],
+      "min": 10.942,
+      "pryskorennya": 1.0234874794370317
+    },
+    {
+      "potoky": 4,
+      "zamiry": [
+        {
+          "pul": 0.0005,
+          "obchyslennya": 11.179,
+          "zapys": 0.0206,
+          "razom": 11.2
+        },
+        {
+          "pul": 0.0005,
+          "obchyslennya": 11.09,
+          "zapys": 0.019,
+          "razom": 11.11
+        },
+        {
+          "pul": 0.001,
+          "obchyslennya": 11.646,
+          "zapys": 0.0284,
+          "razom": 11.675
+        }
+      ],
+      "min": 11.11,
+      "pryskorennya": 1.008010801080108
+    },
+    {
+      "potoky": 8,
+      "zamiry": [
+        {
+          "pul": 0.0009,
+          "obchyslennya": 11.575,
+          "zapys": 0.0222,
+          "razom": 11.598
+        },
+        {
+          "pul": 0.0008,
+          "obchyslennya": 11.061,
+          "zapys": 0.0218,
+          "razom": 11.083
+        },
+        {
+          "pul": 0.0009,
+          "obchyslennya": 10.919,
+          "zapys": 0.0184,
+          "razom": 10.938
+        }
+      ],
+      "min": 10.938,
+      "pryskorennya": 1.023861766319254
+    },
+    {
+      "potoky": 16,
+      "zamiry": [
+        {
+          "pul": 0.0021,
+          "obchyslennya": 11.3,
+          "zapys": 0.0238,
+          "razom": 11.326
+        },
+        {
+          "pul": 0.0015,
+          "obchyslennya": 11.632,
+          "zapys": 0.0276,
+          "razom": 11.661
+        },
+        {
+          "pul": 0.0025,
+          "obchyslennya": 11.063,
+          "zapys": 0.0198,
+          "razom": 11.086
+        }
+      ],
+      "min": 11.086,
+      "pryskorennya": 1.010193036261952
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+Розмір: 600×400, max_iter=500
+
+=== за власним часом (tottime) ===
+         31909619 function calls in 28.336 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   240000   15.558    0.000   27.761    0.000 mandelbrot.py:40(iteratsii)
+ 31668707   12.203    0.000   12.203    0.000 {built-in method builtins.abs}
+      400    0.542    0.001   28.303    0.071 mandelbrot.py:50(obchyslyty_riadok)
+        1    0.028    0.028    0.032    0.032 mandelbrot.py:64(zapysaty_pgm)
+        1    0.002    0.002    0.002    0.002 {built-in method _io.open}
+        2    0.001    0.001    0.001    0.001 {method 'write' of '_io.BufferedWriter' objects}
+      502    0.001    0.000    0.001    0.000 mandelbrot.py:69(<genexpr>)
+        1    0.001    0.001   28.304   28.304 mandelbrot.py:58(obchyslyty)
+        1    0.000    0.000    0.000    0.000 {method '__exit__' of '_io._IOBase' objects}
+        1    0.000    0.000   28.336   28.336 profil.py:24(odyn_progin)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+
+
+=== за накопиченим часом (cumtime) ===
+         31909619 function calls in 28.336 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   28.336   28.336 profil.py:24(odyn_progin)
+        1    0.001    0.001   28.304   28.304 mandelbrot.py:58(obchyslyty)
+      400    0.542    0.001   28.303    0.071 mandelbrot.py:50(obchyslyty_riadok)
+   240000   15.558    0.000   27.761    0.000 mandelbrot.py:40(iteratsii)
+ 31668707   12.203    0.000   12.203    0.000 {built-in method builtins.abs}
+        1    0.028    0.028    0.032    0.032 mandelbrot.py:64(zapysaty_pgm)
+        1    0.002    0.002    0.002    0.002 {built-in method _io.open}
+        2    0.001    0.001    0.001    0.001 {method 'write' of '_io.BufferedWriter' objects}
+      502    0.001    0.000    0.001    0.000 mandelbrot.py:69(<genexpr>)
+        1    0.000    0.000    0.000    0.000 {method '__exit__' of '_io._IOBase' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+
+

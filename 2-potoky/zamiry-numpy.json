@@ -1,0 +1,128 @@
+{
+  "zadacha": "numpy",
+  "posl_min": 2.75,
+  "shyryna": 1200,
+  "vysota": 800,
+  "max_iter": 500,
+  "smuha": 50,
+  "cpu_count": 16,
+  "progoniv": 3,
+  "perevirka": {
+    "python_c": 6.679,
+    "numpy_c": 0.707,
+    "rozbizhnosti": 8,
+    "tochok": 240000
+  },
+  "tochky": [
+    {
+      "potoky": 1,
+      "zamiry": [
+        {
+          "pul": 0.0,
+          "obchyslennya": 2.794,
+          "razom": 2.794
+        },
+        {
+          "pul": 0.0,
+          "obchyslennya": 2.75,
+          "razom": 2.75
+        },
+        {
+          "pul": 0.0,
+          "obchyslennya": 2.765,
+          "razom": 2.765
+        }
+      ],
+      "min": 2.75,
+      "pryskorennya": 1.0
+    },
+    {
+      "potoky": 2,
+      "zamiry": [
+        {
+          "pul": 0.0002,
+          "obchyslennya": 1.55,
+          "razom": 1.55
+        },
+        {
+          "pul": 0.0002,
+          "obchyslennya": 1.476,
+          "razom": 1.476
+        },
+        {
+          "pul": 0.0002,
+          "obchyslennya": 1.513,
+          "razom": 1.513
+        }
+      ],
+      "min": 1.476,
+      "pryskorennya": 1.8631436314363143
+    },
+    {
+      "potoky": 4,
+      "zamiry": [
+        {
+          "pul": 0.0004,
+          "obchyslennya": 1.198,
+          "razom": 1.198
+        },
+        {
+          "pul": 0.0007,
+          "obchyslennya": 1.205,
+          "razom": 1.205
+        },
+        {
+          "pul": 0.0004,
+          "obchyslennya": 1.191,
+          "razom": 1.192
+        }
+      ],
+      "min": 1.192,
+      "pryskorennya": 2.307046979865772
+    },
+    {
+      "potoky": 8,
+      "zamiry": [
+        {
+          "pul": 0.0006,
+          "obchyslennya": 1.498,
+          "razom": 1.498
+        },
+        {
+          "pul": 0.0007,
+          "obchyslennya": 1.529,
+          "razom": 1.53
+        },
+        {
+          "pul": 0.0008,
+          "obchyslennya": 1.512,
+          "razom": 1.513
+        }
+      ],
+      "min": 1.498,
+      "pryskorennya": 1.835781041388518
+    },
+    {
+      "potoky": 16,
+      "zamiry": [
+        {
+          "pul": 0.0013,
+          "obchyslennya": 2.167,
+          "razom": 2.168
+        },
+        {
+          "pul": 0.0013,
+          "obchyslennya": 2.189,
+          "razom": 2.191
+        },
+        {
+          "pul": 0.0015,
+          "obchyslennya": 2.238,
+          "razom": 2.24
+        }
+      ],
+      "min": 2.168,
+      "pryskorennya": 1.268450184501845
+    }
+  ]
+}
