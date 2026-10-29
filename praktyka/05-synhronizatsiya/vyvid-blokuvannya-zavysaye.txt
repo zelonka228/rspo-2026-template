@@ -1,0 +1,20 @@
+Timeout (0:00:05)!
+Timeout (0:00:05)!
+Thread 0x00007f9c (most recent call first):
+Thread 0x  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\synchronize.py", line 95 in __enter__
+  File "C:\Users\Administrator\Desktop\ParalelniObchislennya\rspo-2026-template\praktyka\05-synhronizatsiya\vzaiemne_blokuvannya.py", line 33 in pereklad
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\process.py", line 108 in run
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\process.py00005b50", line 314 in _bootstrap
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 135 in _main
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 122 in spawn_main
+  File "<string>", line 1 in <module>
+ (most recent call first):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\synchronize.py", line 95 in __enter__
+  File "C:\Users\Administrator\Desktop\ParalelniObchislennya\rspo-2026-template\praktyka\05-synhronizatsiya\vzaiemne_blokuvannya.py", line 33 in pereklad
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\process.py", line 108 in run
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\process.py", line 314 in _bootstrap
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 135 in _main
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 122 in spawn_main
+  File "<string>", line 1 in <module>
+Режим: zavysaye
+  ЗАВИСЛО: після 14.0 c процеси досі живі
