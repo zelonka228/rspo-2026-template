@@ -37,22 +37,33 @@ def odyn_zapyt(port, zapyt, taimaut):
         s.close()
 
 
-def kliyent(nomer, port, zapytiv, taimaut, kliuch, chasy, vuzly_lich, pomylky, zamok):
+def kliyent(nomer, port, zapytiv, taimaut, kliuch, chasy, vuzly_lich, pomylky, zamok,
+            povtoriv=0, povtory=None):
     for i in range(zapytiv):
         zapyt = {"dia": "dodaty", "zapys": {"kliyent": nomer, "nomer": i}}
         if kliuch:
             zapyt["kliuch"] = str(uuid.uuid4())
         t0 = time.perf_counter()
-        try:
-            vidpovid = odyn_zapyt(port, zapyt, taimaut)
-            dt = (time.perf_counter() - t0) * 1000
-            with zamok:
-                chasy.append(dt)
-                v = vidpovid.get("vuzol", "?")
-                vuzly_lich[v] = vuzly_lich.get(v, 0) + 1
-        except (OSError, ConnectionError, ValueError) as e:
-            with zamok:
-                pomylky.append(type(e).__name__)
+        sprob = 0
+        while True:
+            try:
+                vidpovid = odyn_zapyt(port, zapyt, taimaut)
+                dt = (time.perf_counter() - t0) * 1000
+                with zamok:
+                    chasy.append(dt)
+                    v = vidpovid.get("vuzol", "?")
+                    vuzly_lich[v] = vuzly_lich.get(v, 0) + 1
+                    if sprob and povtory is not None:
+                        povtory.append(sprob)
+                break
+            except (OSError, ConnectionError, ValueError) as e:
+                if sprob >= povtoriv:
+                    with zamok:
+                        pomylky.append(type(e).__name__)
+                    break
+                sprob += 1
+                # той самий запит, з тим самим ключем: нова спроба піде вже в живий вузол
+                time.sleep(0.3)
 
 
 def main():
@@ -65,13 +76,16 @@ def main():
     p.add_argument("--kliuch", action="store_true", help="додавати ключ ідемпотентності")
     p.add_argument("--vuzly", type=int, nargs="*", default=[50007, 50008],
                    help="у кого наприкінці питати стан")
+    p.add_argument("--povtoriv", type=int, default=0,
+                   help="скільки разів повторити запит після помилки (0 — не повторювати)")
     args = p.parse_args()
 
-    chasy, pomylky, vuzly_lich = [], [], {}
+    chasy, pomylky, vuzly_lich, povtory = [], [], {}, []
     zamok = threading.Lock()
     potoky = [threading.Thread(target=kliyent,
                                args=(n, args.port, args.zapytiv, args.taimaut,
-                                     args.kliuch, chasy, vuzly_lich, pomylky, zamok))
+                                     args.kliuch, chasy, vuzly_lich, pomylky, zamok,
+                                     args.povtoriv, povtory))
               for n in range(args.kliyentiv)]
 
     t0 = time.perf_counter()
@@ -92,6 +106,8 @@ def main():
               f"максимум {max(chasy):.2f} мс")
     if vuzly_lich:
         print("обслужили: " + " · ".join(f"{k}: {v}" for k, v in sorted(vuzly_lich.items())))
+    if args.povtoriv:
+        print(f"запитів, що знадобили повтору: {len(povtory)}")
     if pomylky:
         vydy = {}
         for e in pomylky:

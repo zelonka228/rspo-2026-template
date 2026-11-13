@@ -1,0 +1,5 @@
+перший раз:  {'status': 'ok', 'vsogo': 1, 'povtor': False}
+повтор:      {'status': 'ok', 'vsogo': 1, 'povtor': True}
+без ключа 1: {'status': 'ok', 'vsogo': 2, 'povtor': False}
+без ключа 2: {'status': 'ok', 'vsogo': 3, 'povtor': False}
+стан:        {'status': 'ok', 'vsogo': 3, 'unikalnyh_kliuchiv': 1, 'zvernen_do_shovyshcha': 5}
